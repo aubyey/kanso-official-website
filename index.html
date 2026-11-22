@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KANSO — One Tap. Instant Connect.</title>
+<meta name="description" content="KANSO is a minimalist NFC + QR digital card. Share contacts, socials and menus with one tap. No app required.">
+<meta name="theme-color" content="#08090a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2308090a'/%3E%3Cpath d='M16 6l8 10-8 10-8-10z' fill='%23d4d4d8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<main class="app">
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="KANSO home">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 10-9 10-9-10z" fill="currentColor"/><path d="M12 2L3 12h18z" fill="#08090a" opacity=".28"/></svg>
+      <span>KANSO</span>
+    </a>
+    <button class="chip" data-open="sheet-qr" aria-label="Open backup QR code">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v1M14 21h3M21 18v3h-2"/></svg>
+      Backup QR
+    </button>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-stage" aria-hidden="false">
+      <div class="float">
+        <div class="flipper">
+          <img class="face front" src="./images/card-hero.png" alt="Matte black KANSO NFC card with the K mark" width="437" height="289" fetchpriority="high">
+          <img class="face back" src="./images/gallery-2.png" alt="Back of the KANSO card: Simplicity, refined.">
+        </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+    <div class="hero-copy">
+      <h1>One Tap.<br>Instant Connect.</h1>
+      <p class="lead">Simplicity, refined. KANSO replaces paper business cards and clunky menus with one minimalist NFC + QR tap. Works on iPhone and Android. No app required.</p>
+    </div>
+  </section>
+
+  <section class="block demo" id="demo" aria-labelledby="h-demo">
+    <div class="demo-copy">
+      <h2 id="h-demo">See it in action</h2>
+      <p class="demo-title">Tap the card. Their phone does the rest.</p>
+      <p class="muted">Their browser opens your profile instantly. They save your contact in one more tap.</p>
+      <button class="btn ghost" id="replay">Replay tap</button>
+    </div>
+    <div class="demo-stage" id="demo-stage">
+      <div class="phone">
+        <div class="screen">
+          <div class="idle">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5a5 5 0 0 1 0 7M11.5 6.5a8 8 0 0 1 0 11M5.5 10.5a2 2 0 0 1 0 3"/></svg>
+            <span>Hold near a KANSO card</span>
+          </div>
+          <div class="profile">
+            <div class="p-top" style="--d:0">
+              <span class="p-brand"><i></i>KANSO</span>
+              <span class="p-qr" aria-hidden="true"></span>
+            </div>
+
+            <div class="p-hero" style="--d:1">
+              <div class="p-hero-row">
+                <div class="avatar"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l9 10-9 10-9-10z" fill="currentColor"/></svg></div>
+                <div class="p-id">
+                  <b>Alex Rivera <span class="p-verif">&#10003;</span></b>
+                  <span class="role">Founder &middot; Traveler &middot; Creator</span>
+                </div>
+              </div>
+              <span class="p-tag">One Tap. Instant Connect.</span>
+              <p class="p-bio">Building brands, chasing trails &amp; good coffee. Always down to connect.</p>
+            </div>
+
+            <div class="psoc" style="--d:2">
+              <i aria-label="Instagram"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></i>
+              <i aria-label="Facebook"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></i>
+              <i aria-label="TikTok"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></i>
+              <i aria-label="Call"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></i>
+              <i aria-label="SMS"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i>
+            </div>
+
+            <div class="p-sec" style="--d:3">CONNECT</div>
+            <div class="p-links" style="--d:4">
+              <div class="plink">
+                <span class="plink-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
+                <span class="plink-txt"><b>Instagram</b><small>@alexrivera</small></span>
+                <span class="plink-chv">&rsaquo;</span>
+              </div>
+              <div class="plink">
+                <span class="plink-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                <span class="plink-txt"><b>Facebook</b><small>Alex Rivera</small></span>
+                <span class="plink-chv">&rsaquo;</span>
+              </div>
+              <div class="plink">
+                <span class="plink-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                <span class="plink-txt"><b>Mobile / Viber</b><small>0917 123 4567</small></span>
+                <span class="plink-copy">Copy</span>
+              </div>
+            </div>
+
+            <div class="p-sec" style="--d:5">GALLERY</div>
+            <div class="p-gal" style="--d:6">
+              <img src="./images/gallery-1.png" alt="">
+              <img src="./images/gallery-2.png" alt="">
+              <img src="./images/gallery-3.jpg" alt="">
+            </div>
+
+            <div class="p-dock" style="--d:7">
+              <div class="pbtn">Save Contact</div>
+              <div class="p-share">&#8599;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="ripple r1"></span><span class="ripple r2"></span><span class="ripple r3"></span>
+      <img class="tapcard" src="./images/card-hero.png" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-features">
+    <h2 id="h-features">What the card can do</h2>
+    <ul class="list">
+      <li class="glass feat">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        <div><h3>1-tap save contact</h3><p>Saves your number, socials and bio straight to their phonebook as a vCard.</p></div>
+      </li>
+      <li class="glass feat">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+        <div><h3>All your socials in one place</h3><p>Instagram, Facebook, TikTok, Viber, Telegram, email and business pages.</p></div>
+      </li>
+      <li class="glass feat">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 16l-5-5-9 9"/></svg>
+        <div><h3>Swipeable photo gallery</h3><p>Show your portfolio, travel shots or brand photos.</p></div>
+      </li>
+      <li class="glass feat">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v1M14 21h3M21 18v3h-2"/></svg>
+        <div><h3>Backup QR code</h3><p>Works even on older phones without NFC.</p></div>
+      </li>
+      <li class="glass feat">
+        <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>
+        <div><h3>Zero app needed</h3><p>Opens instantly in any phone browser.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="h-who">
+    <h2 id="h-who">Who it's for</h2>
+    <div class="list">
+      <article class="glass use">
+        <h3>Nightlife &amp; socializing</h3>
+        <p>Stop shouting your Instagram over the music. Share your IG, TikTok or number in 2 seconds at bars, events and parties.</p>
+      </article>
+      <article class="glass use">
+        <h3>Travelers &amp; explorers</h3>
+        <p>Met someone great on the road? One tap keeps you connected, wherever the next stop is.</p>
+      </article>
+      <article class="glass use">
+        <h3>Business owners &amp; founders</h3>
+        <p>Leave a lasting impression with clients and link straight to your business pages. No more reprinting cards.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-menu">
+    <h2 id="h-menu">Tap-to-menu for cafes, bars &amp; restaurants</h2>
+    <div class="glass menu-show">
+      <img src="./images/menu-stand.jpg" alt="KANSO matte black NFC + QR card in a minimalist wooden table stand on a cafe table" loading="lazy" width="640" height="640">
+      <div class="menu-copy">
+        <p>A debit-card-sized matte black NFC + QR card in a minimalist wooden table stand. Customers tap or scan from their table or while in line, so the counter keeps moving.</p>
+        <p>Change a price or add a seasonal drink once online. Your menu is updated everywhere, and you never reprint again.</p>
+        <button class="btn ghost" data-open="sheet-menu">Preview sample menu</button>
+      </div>
+    </div>
+  </section>
+
+<section class="block" aria-labelledby="h-gallery">
+    <h2 id="h-gallery">Product gallery</h2>
+    <div class="showcase-grid" id="gallery">
+
+      <!-- 1. KANSO Digital Business Card -->
+      <article class="glass showcase-card">
+        <div class="flip-stage">
+          <div class="flip-card">
+            <img class="flip-face flip-front" src="./images/card-hero.png" alt="KANSO Digital Business Card — Front" loading="lazy">
+            <img class="flip-face flip-back" src="./images/gallery-2.png" alt="KANSO Digital Business Card — Back" loading="lazy">
+          </div>
+        </div>
+        <div class="showcase-meta">
+          <h3>KANSO Card</h3>
+          <p>Digital business card &middot; Front &amp; back</p>
+        </div>
+      </article>
+
+      <!-- 2. KANSO Tap-to-Menu -->
+      <article class="glass showcase-card">
+        <div class="flip-stage">
+          <div class="flip-card flip-delay">
+            <img class="flip-face flip-front" src="./images/menu-stand.jpg" alt="KANSO Table Menu — Front" loading="lazy">
+            <img class="flip-face flip-back" src="./images/tableMenuBack.webp" alt="KANSO Table Menu — Back" loading="lazy">
+          </div>
+        </div>
+        <div class="showcase-meta">
+          <h3>KANSO Table</h3>
+          <p>Tap-to-menu stand &middot; Front &amp; back</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-connect">
+    <h2 id="h-connect">Connect &amp; order</h2>
+    <div class="list two">
+      <a class="glass link" href="https://www.instagram.com/kansocard.ph?gwpx=MTZmMTRteHd5Z2FvNQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+        <span>Instagram<small>@kansocard.ph</small></span>
+      </a>
+      <a class="glass link" href="https://www.facebook.com/share/1BfeaK8mdZ/?mibextid=wwXIfr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+        <span>Facebook<small>KANSO official page</small></span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="foot">KANSO &middot; Simplicity, refined. powered by M.J.B & R.A.G</footer>
+</main>
+
+<nav class="dock" aria-label="Primary actions">
+  <button class="btn primary" data-open="sheet-order">Order your KANSO</button>
+  <button class="btn icon" id="share" aria-label="Share this page">
+    <svg viewBox="0 0 24 24"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v14"/></svg>
+  </button>
+</nav>
+
+<!-- Bottom sheets -->
+<div class="scrim" id="scrim" hidden></div>
+
+<section class="sheet" id="sheet-qr" role="dialog" aria-modal="true" aria-label="Backup QR code" hidden>
+  <div class="grab"></div>
+  <h3>Backup QR code</h3>
+  <p class="muted">No NFC? Scan this with any camera.</p>
+  <div class="qr" id="qr"></div>
+  <button class="btn primary" id="copy">Copy link</button>
+  <button class="btn ghost" data-close>Close</button>
+</section>
+
+<section class="sheet" id="sheet-order" role="dialog" aria-modal="true" aria-label="Order your KANSO" hidden>
+  <div class="grab"></div>
+  <h3>Order your KANSO</h3>
+  <p class="muted">Send us a message and we'll take it from there.</p>
+  <a class="btn primary" href="https://www.instagram.com/kansocard.ph?gwpx=MTZmMTRteHd5Z2FvNQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">Message on Instagram</a>
+  <a class="btn ghost" href="https://www.facebook.com/share/1BfeaK8mdZ/?mibextid=wwXIfr" target="_blank" rel="noopener">Message on Facebook</a>
+  <button class="btn text" data-close>Not now</button>
+</section>
+
+<section class="sheet tall" id="sheet-menu" role="dialog" aria-modal="true" aria-label="Sample cafe menu" hidden>
+  <div class="grab"></div>
+  <h3>Sample cafe menu</h3>
+  <p class="muted">This is what your customers see after a tap.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <ul class="items" id="items"></ul>
+  <div class="order-bar" id="order-bar" hidden><span id="order-count"></span><button class="btn-sm" id="order-clear">Clear</button></div>
+  <button class="btn ghost" data-close>Close preview</button>
+</section>
+
+<!-- Lightbox: swipe only, no arrows -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <div class="lb-top">
+    <span id="lb-count">1 / 3</span>
+    <button id="lb-close" aria-label="Close viewer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
